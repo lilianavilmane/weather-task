@@ -15,7 +15,7 @@ async function showWeather(position) {
     const data = await response.json();
     console.log(data);
     const element = document.getElementById("temp")
-    element.innerHTML = data.current_weather.temperature + "C";
+    element.innerHTML = data.current_weather.temperature + " C";
     
 
     
@@ -56,6 +56,7 @@ async function showWeather(position) {
         case 77:
         case 85:
         case 86:
+        case 80:
             document.getElementById("snow").style = "";
             break;
 
@@ -66,7 +67,7 @@ function weekDay(){
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",  "November", "December"];
     const myDate = new Date();
-    const fullDate = "Today " + myDate.getDate() + "" +month[myDate.getMonth()]+ "" + myDate.getFullYear() + "," + days[myDate.getDay()];
+    const fullDate = "Today " + myDate.getDate() + " " + month[myDate.getMonth()]+ " " + myDate.getFullYear() + " " + days[myDate.getDay()];
     document.getElementById(fullDate);
     const day = document.getElementById("day")
     day.innerHTML = (fullDate);
